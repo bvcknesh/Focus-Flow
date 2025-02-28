@@ -1,0 +1,104 @@
+.register-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+    justify-items: center;
+    gap: 1.25rem; /* Dynamic spacing between elements */
+    padding: 2rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    width: 80%; /* Scales based on screen size */
+    max-width: 25rem; /* Caps width for larger screens */
+    margin: 20vh auto; /* Dynamic vertical centering */
+    background: linear-gradient(to bottom right, #66d9ff, #9bc8f2);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .register-container h2 {
+    font-size: 3rem;
+    color: 
+    #ffffff;
+    margin: 1;
+    text-align: center;
+  }
+  
+  .register-container input {
+    width: 100%; /* Full width of the container */
+    padding: 0.75rem;
+    margin: 0.3rem 0;
+    border: 0.05rem solid #ffffff;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    
+  }
+  
+  .register-container button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4bbf4f;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-container button:hover {
+    background-color: #3a923f;
+  }
+  
+  .register-container p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .register-container p span {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .register-container p span:hover {
+    color: #0056b3;
+  }
+  
+  @media (max-width: 600px) {
+    .register-container {
+      padding: 1.5rem;
+      width: 90%; /* Adjust for smaller screens */
+    }
+  
+    .register-container h2 {
+      font-size: 1.25rem;
+    }
+  
+    .register-container input {
+      font-size: 0.9rem;
+    }
+  
+    .register-container button {
+      font-size: 0.9rem;
+    }
+  }
+
+  .prefernces-container {
+    display: grid;
+    grid-template-rows: auto 2fr auto;
+    align-items: center;
+    justify-items: center;
+    gap: 1.25rem; /* Dynamic spacing between elements */
+    padding: 2rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    width: 80%; /* Scales based on screen size */
+    max-width: 25rem; /* Caps width for larger screens */
+    margin: 20vh auto; /* Dynamic vertical centering */
+    background: linear-gradient(to bottom right, #66d9ff, #9bc8f2);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  }
+  
+  

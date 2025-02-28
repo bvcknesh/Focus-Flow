@@ -1,0 +1,31 @@
+.container{
+    background-color: rgb(46, 150, 35);
+    width:100vh;
+
+    max-height: 100vh;
+    display:grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5rem 1fr 1fr;
+    overflow: hidden;
+    
+
+}
+  
+.maincontent{
+   
+    background-color: rgb(57, 108, 153);
+    grid-column: 1/3;
+    grid-row:2/4;
+}
+
+.AIPromptcontainer{
+    background-color: aqua;
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+.navbar{
+    grid-column:1/4;
+    grid-row: 1/1;
+}

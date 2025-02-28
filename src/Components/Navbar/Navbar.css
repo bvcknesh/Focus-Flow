@@ -1,0 +1,70 @@
+.navbar{
+    width: 100%;
+    height: 5rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between; 
+    background: linear-gradient(to top, rgb(8, 180, 237), rgb(3, 97, 180));
+    padding: 0.0625rem 2%;
+    text-align: center;
+}
+
+.logo{
+    width:3%;
+    height:auto;
+    cursor: pointer;
+}
+
+
+
+h1{
+    font-size:4rem;
+    color: aliceblue;
+    text-align: center;
+ 
+    
+}
+
+.button-container {
+    display: flex; /* Align buttons in a row */
+    gap: 0.625rem; /* Space between buttons */
+    margin-left: auto; /* Push buttons to the right */
+    padding: 0; 
+}
+.B1, .B2, .B3{
+            
+     
+    font-family: 'CustomFont', sans-serif;
+   
+    transform: translateX(-50%); /* Align exactly at the center */
+    background-color: rgb(198, 43, 43);
+    color: white;
+    border: 0.1875rem;
+    border-radius: 30%;
+    border: px solid #000000; 
+     /* Make it circular */
+    width: 4.25rem; /* Button width */
+    height: 2.75rem; /* Button height */
+    font-size: 2.5rem; /* Font size for text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0rem 0.9375rem 0rem  0.0625px rgb(253, 197, 197);
+    transition-duration: 200ms;
+    z-index: 1;
+}
+.B1 svg, .B2 svg, .B3 svg {
+    margin-right: 0.25;
+}
+.B1:hover, .B2:hover, .B3:hover {
+    width: 5.25rem;
+    height: 3.75rem;
+    font-size: 2.875rem;
+    background-color: rgb(191, 46, 46);
+    box-shadow: 0rem 1rem 0rem 0.0625rem rgb(246, 206, 206);
+}
+.B1:active, .B2:active, .B3:active {
+    transform: translateX(-50%) translateY(13px) scale(0.98); /* Move button down */
+    box-shadow: 0rem 0.4375rem 0.3125rem 0rem rgba(129, 97, 97, 0.269);
+}

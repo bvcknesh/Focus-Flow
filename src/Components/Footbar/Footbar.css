@@ -1,0 +1,341 @@
+.body {
+    background-color: #b7191912;
+   
+}
+
+.circle-button {
+    position: fixed; 
+    font-family: 'CustomFont', sans-serif;
+    bottom: 7.125rem; /* Changed from 34px */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Align exactly at the center */
+    background-color: rgb(225, 63, 63);
+    color: white;
+    border: 3rem;
+    border-radius: 55%;
+    border-color: #000000;
+    width: 10rem; /* Button width */
+    height: 6rem; /* Button height */
+    font-size: 6rem; /* Font size for text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0rem 0.9375rem 0rem 0.0625rem rgb(253, 197, 197); /* Changed from px */
+    transition-duration: 200ms;
+    z-index: 3;
+}
+
+.circle-button:hover {
+    width: 11rem;
+    height: 7rem;
+    font-size: 6.375rem;
+    background-color: rgb(220, 52, 52);
+    box-shadow: 0rem 1rem 0rem 0.0625rem rgb(246, 206, 206); /* Changed from px */
+}
+
+.circle-button:active {
+    transform: translateX(-50%) translateY(0.8125rem) scale(0.98); /* Changed from px */
+    box-shadow: 0rem 0.4375rem 0.3125rem 0rem rgba(129, 97, 97, 0.269); /* Changed from px */
+}
+.sort-button-container{
+
+    background-color: #00000000;
+  
+
+}
+.sort-dropdown{
+    background-color: #0466cf;
+    width: 13rem;
+    height: 3rem;
+    align-content: center;
+    color: #ffffff;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    margin-right: 1.5rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+
+.task-list-wrapper {
+    
+    height: 100vh;
+    width: 100%;
+    max-height: 100vh;
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    overflow-y: hidden;
+    border: 0.0625rem solid #ffffff; /* Border of the wrapper */
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(5px);
+    transition: backdrop-filter 0.3s ease, opacity 0.3s ease;
+
+}
+.task-counter{
+    width: 3rem;
+    height: 3rem;;
+    font-size: 2rem;
+}
+
+.heading {
+    background-color: #0466cf;
+    text-align: center;
+    height:5rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #ffffffea;
+    font-size: 0.2rem; /* Adjusted from 64px to rem */
+
+   
+}
+.heading h1{
+    left:10%;
+    padding: 3%;
+    color: #0466cf
+}
+.task-list {
+    width:100%;
+    height:70%;
+    font-size: 1.875rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;;
+   
+    border-color: hwb(0 82% 18%);
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+    
+}
+
+.task-list::-webkit-scrollbar {
+    right: 50%;
+    width: 1rem; /* Changed from px */
+}
+
+.task-list::-webkit-scrollbar-track {
+    background: #cbe1fa;
+    border-radius: 2rem;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background: rgb(104, 157, 237);
+    border-radius: 0.625rem; /* Changed from px */
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+    background: rgb(122, 162, 250);
+}
+
+.task-container {
+    width: 95%;
+    height: 3.125rem; /* Changed from px */
+    border: 0.0625rem solid #2a8ae3; /* Changed from px */
+    color: #2c2c2c;
+    border-radius: 0.5rem;
+    background-color: #80a5fc;
+    box-shadow: 0.3rem 0.1rem 0.3rem rgba(0, 0, 0, 0.65); /* Changed from px */
+    
+
+    display: grid;
+    grid-template-columns: 10rem 1fr 1fr;
+   
+    
+    margin-bottom: 0.650rem; /* Changed from px */
+
+   
+}
+.task-container.low {
+    background-color:  #00aaff1b; /* Light gray background for low priority */
+    border: 0.2rem solid #abd4f4; /* Green left border for low priority */
+  }
+  
+  .task-container.med {
+    background-color: #90daff8f;/* Light orange background for medium priority */
+    border: 0.2rem solid #72d0fc6f; /* Orange left border for medium priority */
+  }
+  
+  .task-container.high {
+    background-color: #86d5fc; /* Light red background for high priority */
+    border: 0.2rem solid #5fb3fd; /* Red left border for high priority */
+  }
+
+.task-container.checked {
+    background-color: rgba(93, 248, 186, 0.269);
+    border: 0.2rem solid #4af1d2;
+    color: rgb(0, 0, 0);
+}
+
+.tasks-button-container {
+    grid-column: 3/4;
+    display: flex;              /* Use Flexbox for layout */
+    justify-content: flex-end;  /* Align buttons to the right */
+    margin-top: 0.5rem;
+    gap: 10px;     
+            /* Space between buttons */
+  }
+.deadlinedue{
+    font-size: 1.3rem;
+    margin-top: 0.125rem;
+    height: 2rem;
+    color: #000000;
+    padding-right: 0.3rem;
+}
+.Notes{
+    background-color:#80a5fc00;
+    height: 2.100rem;
+    border-color:rgb(220, 52, 52,0);
+    color: #000000;
+    font-size: 1.3rem;
+    padding-right: 0.3rem;
+}
+.Notes:hover{
+    color:#000000;
+    cursor: pointer;
+}
+.checkedNotes{
+    background-color:#80a5fc00;
+    height: 2.100rem;
+    border-color:rgb(220, 52, 52,0);
+    color: #000000;
+    font-size: 1.3rem;
+    padding-right: 0.3rem;
+
+}
+.Delete{
+    background-color:#80a5fc00;
+    height: 2.125rem;
+    border-color:rgb(220, 52, 52,0);
+    color: #000000;
+    font-size: 1.3rem;
+    padding-right: 1rem;
+}
+.Delete:hover{
+    color: #c12424;
+    cursor: pointer;
+}
+.checkedDelete{
+    background-color:#80a5fc00;
+    height: 2.125rem;
+    border-color:rgb(220, 52, 52,0);
+    color: #000000;
+    font-size: 1.3rem;
+    padding-right: 1rem;
+
+}
+.task-label-container{
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    width:20vw;
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; 
+    overflow: hidden;
+    margin-left: -5rem;
+}
+.task-label{
+    z-index: 2;
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; 
+   
+}
+
+
+.line {
+    
+    height: 1px; /* Height of the line */
+    background-color: #c20f0f; /* Color of the line */
+    margin: 10px 0; /* Spacing above and below the line */
+    width: 40vw; /* Full width of the container */
+    z-index:1000;
+}
+  
+input[type="checkbox"] {
+    display: none;
+}
+
+
+.checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    width: 1.875rem;
+    height: 1.875rem;
+    border: 0.25rem solid #343232; /* Changed from px */
+    border-radius: 9px;
+    position: relative;
+    margin-right: 0.9375rem; /* Changed from px */
+    margin-left: 1.0625rem; /* Changed from px */
+}
+
+.custom-checkbox::after {
+    content: '';
+    position: absolute;
+    left: 0.430rem; /* Changed from px */
+    top: 0.1890rem; /* Changed from px */
+    width: 0.4rem; /* Changed from px */
+    height: 0.5860rem; /* Changed from px */
+    border: solid #3c3a3a;
+    border-width: 0 0.125rem 0.125rem 0; /* Changed from px */
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox::after {
+    opacity: 1;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: #ffffff;
+    border-color: #000000;
+}
+
+.sort-button, .history-button{
+            
+
+    left:0%;
+    transform: translateX(-50%); /* Align exactly at the center */
+    background-color: rgb(48, 66, 255);
+    color: white;
+    border: 0.1875rem;
+    border-radius: 30%;
+    border: px solid #000000; 
+     /* Make it circular */
+    width: 3.25rem; /* Button width */
+    height: 2.75rem; /* Button height */
+    font-size: 1.5rem; /* Font size for text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0rem 0.6375rem 0rem  0.0325px  rgb(180, 201, 248);
+    transition-duration: 200ms;
+    z-index: 1;
+}
+
+.button-container {
+    display: flex; /* Align buttons in a row */
+    gap: 0.1rem; /* Space between buttons */
+    margin-left: auto; /* Push buttons to the right */
+    padding: 1rem; 
+}
+
+.sort-button svg, .history-button svg {
+    margin-right: 0.1;
+}
+.sort-button:hover, .history-button:hover {
+    background-color: rgb(30, 49, 252);
+    box-shadow: 0rem 0.6380rem 0rem 0.0330rem rgb(180, 201, 248);
+}
+.sort-button:active, .history-button:active {
+    transform: translateX(-50%) translateY(13px) scale(0.98); /* Move button down */
+    box-shadow: 0rem 0.4375rem 0.3125rem 0rem rgba(129, 97, 97, 0.269);
+}

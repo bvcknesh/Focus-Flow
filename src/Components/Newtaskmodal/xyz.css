@@ -1,0 +1,114 @@
+/* Modal Background */
+.modal-wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(213, 236, 247, 0.9);
+    z-index: 999;
+}
+
+/* Modal Container */
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(65, 147, 253);
+    border: 5px solid rgb(40, 157, 225);
+    width: 50vw;
+    max-width: 50rem;
+    height: 60vh;
+    max-height: 50vh;
+    padding: 2rem 2rem;
+    border-radius: 3.5rem;
+    font-size: 1.875rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    z-index: 1000;
+}
+
+/* Modal Title */
+.modal-container h3 {
+    grid-row: 1/1;
+    grid-column: 3/5;
+    color: white;
+    text-align: center;
+}
+
+/* Note Input */
+.noteInput {
+    grid-column: 1/7;
+    grid-row: 2/8;
+    border: 0.25rem solid #2cacbc;
+    background-color: #89c6f9;
+    border-radius: 0.7rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: auto;
+    line-height: 1.5rem;
+    z-index: 1000;
+}
+
+
+
+.noteInput::placeholder {
+    text-align: center;
+}
+
+.noteInput::-webkit-scrollbar {
+    margin-left: 1rem;
+    margin-right: -3rem;
+    width: 0.5rem;
+    height: 2rem;
+}
+
+.noteInput::-webkit-scrollbar-track {
+    background: rgba(119, 152, 253, 0.1);
+    border-radius: 5rem;
+}
+
+.noteInput::-webkit-scrollbar-thumb {
+    background: rgb(212, 233, 247);
+    border-radius: 0.5rem;
+}
+
+.noteInput::-webkit-scrollbar-thumb:hover {
+    background: rgb(134, 156, 245);
+}
+
+/* Close Button */
+.close {
+    grid-column: 3/5;
+    grid-row: 10/11; 
+    background-color: rgb(225, 63, 63);
+    color: white;
+    border: 0.1875rem solid #000000;
+    border-radius: 30%;
+    width: 8rem;
+    height: 3.125rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0rem 0.625rem 0rem 0.0625rem rgb(255, 255, 255);
+    transition-duration: 200ms;
+}
+
+/* Close Button Hover */
+.close:hover {
+    width: 5.6875rem;
+    height: 3.125rem;
+    font-size: 1.5625rem;
+    background-color: rgb(220, 52, 52);
+    box-shadow: 0rem 0.6875rem 0rem 0.0625rem rgb(255, 255, 255);
+}
+
+.close:active {
+    transform: translateY(0.8125rem) scale(0.98);
+    box-shadow: 0rem 0.4375rem 0.3125rem 0rem rgba(129, 97, 97, 0.269);
+}

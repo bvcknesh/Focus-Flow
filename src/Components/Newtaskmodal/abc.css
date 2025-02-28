@@ -1,0 +1,317 @@
+.modal-wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(156, 187, 201, 0.9);
+    z-index: 999;
+}
+
+h1 {
+    text-align: center;
+    color: azure;
+}
+
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow-y: auto;
+    transform: translate(-50%, -50%);
+    border: 0.1875rem solid #000000;
+    width: 80vw; 
+    max-width: 70rem; 
+    height: 70vh; 
+    max-height: 90vh;
+    font-size: 1.875rem; 
+    background-color: rgb(65, 147, 253);
+    padding: 2rem 3rem;
+    border-radius: 3.5rem;
+    border-color: rgb(40, 157, 225);
+    border-width: 5px;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows:2rem 1fr 1fr 1fr 1fr  ;
+}
+
+.close {
+    position: absolute; /* Position the close button absolutely */
+    bottom: 2.5rem; /* Distance from the bottom */
+    right: 1.9rem; /* Distance from the right */
+    background-color: rgb(225, 63, 63);
+    color: white;
+    border: 0.1875rem solid #000000; 
+    border-radius: 30%; 
+    width: 5.625rem; 
+    height: 3.125rem; 
+    font-size: 1.5rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0rem 0.625rem 0rem 0.0625rem rgb(255, 255, 255);
+    transition-duration: 200ms;
+}
+.create-close-button-container{
+    margin-top: 9rem;
+    background-color:#000000;
+
+    z-index: 1000;
+}
+
+.create {
+    position: absolute;
+    bottom: 2.5rem; /* Distance from the bottom */
+    right: 28.7rem;
+     /* Converted from 32px */
+    background-color: rgb(29, 64, 237); /* Different color for visibility */
+    color: white;
+    border: 0.1875rem solid #000000; /* Converted from 3px */
+    border-radius: 35%;
+    width: 11rem; /* Converted from 160px */
+    height: 5.5rem; /* Converted from 80px */
+    font-size: 2rem; /* Converted from 32px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0rem 0.625rem 0rem 0.0625rem rgb(166, 236, 248); /* Converted from 0px 10px 0px 1px */
+    transition-duration: 200ms;
+    margin: 0 auto; /* Center horizontally */
+}
+
+.close:hover {
+    width: 5.6875rem; /* Converted from 91px */
+    height: 3.125rem; /* Converted from 50px */
+    font-size: 1.5625rem; /* Converted from 25px */
+    background-color: rgb(220, 52, 52);
+    box-shadow: 0rem 0.6875rem 0rem 0.0625rem rgb(255, 255, 255); /* Converted from 0px 11px 0px 1px */
+}
+
+.create:hover {
+    width: 11.0625rem; /* Converted from 161px */
+    height: 5.5625rem; /* Converted from 81px */
+    font-size: 2.0625rem; /* Converted from 33px */
+    background-color: rgb(40, 166, 245);
+    box-shadow: 0rem 0.6875rem 0rem 0.0625rem rgb(206, 230, 246); /* Converted from 0px 11px 0px 1px */
+}
+
+.close:active, .create:active {
+    transform: translateY(0.8125rem) scale(0.98); /* Converted from 13px */
+    box-shadow: 0rem 0.4375rem 0.3125rem 0rem rgba(129, 97, 97, 0.269); /* Converted from 0px 7px 5px */
+}
+
+.Textinput {
+    grid-row:  2/2;
+    grid-column: 1/3;
+    height: 3.125rem; /* Converted from 50px */
+    border: 0.25rem solid #84e2ef; /* Converted from 4px */
+    margin-top: 1rem; /* Converted from 20px */
+    background-color: #c1e2fd;
+    border-radius: 3.5rem;
+    font-size: 1.5rem; /* Converted from 24px */
+    padding: 1rem;
+}
+
+.Textinput:focus {
+    border: 0.25rem solid rgba(64, 169, 214, 0.988); /* Converted from 4px */
+    outline: none;
+    background-color: #c1e2fd;
+}
+
+.note-container{
+    background-color: #f1151500;
+    z-index: 1000;
+    width: 55%;
+    margin-top: 0.5rem;
+
+}
+h2 {
+    font-size: 1.9rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 0.1rems;
+    color: rgb(255, 255, 255);
+}
+.noteInput {
+    
+    grid-column: 1/2;
+    grid-row:3/5 ;/* Large input box */
+    border: 0.25rem #84e2ef; 
+    margin-top: 0.2rem;
+    margin-left: 0rem; 
+    background-color:#c1e2fd;
+    border-radius: 0.7rem;
+    font-size: 1.5rem;
+    padding: 1rem; /* Add padding to control text placement */
+    box-sizing: border-box; /* Ensure padding doesn't affect the total width */
+    line-height: 1.5rem; /* Adjust line height to control vertical text positioning */
+
+    z-index: 1000;
+    overflow: auto;
+    padding-right: 10rem;
+}
+
+.noteInput:focus {
+    border: 0.25rem solid rgba(193, 244, 252, 0.988);
+    outline: none;
+    background-color: #c1e2fd;
+}
+
+.noteInput::placeholder {
+   
+    text-align: left; /* Align placeholder text to the left */
+    padding-top: 0; /* Ensure padding doesn't push text down */
+    vertical-align: top;
+}
+.noteInput::-webkit-scrollbar {
+    margin-left: 1rem;
+    margin-right: -3rem;
+    right: 30%;
+    width: 0.5rem; /* Changed from px */
+    height: 2rem;
+}
+
+.noteInput::-webkit-scrollbar-track {
+    background:rgba(119, 152, 253, 0.1);
+    border-radius: 5rem;
+}
+
+.noteInput::-webkit-scrollbar-thumb {
+    background: rgb(212, 233, 247);
+    border-radius: 0.5rem; /* Changed from px */
+}
+
+.noteInput::-webkit-scrollbar-thumb:hover {
+    background: rgb(134, 156, 245);
+}
+
+.Priority{
+    grid-column: 2/3;
+    grid-row:3/4;
+    background-color: #84e2ef00;
+}
+.Deadline{
+    grid-column: 2/3;
+    grid-row:4/5;
+    background-color: rgba(0, 255, 255, 0);
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.calendar{
+    grid-row: 2/3;
+    grid-column: 1/5;
+    background-color: #307b1b00;
+    border: #000000;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 1rem;
+    
+
+}
+
+.calendar:focus {
+   
+    outline: none;
+   
+}
+.calendar::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(1); /* Adjusts the color of the calendar icon */
+  }
+
+.modal-container h3{
+        color: white;
+        grid-column: 1/3;
+        text-align: center;
+}
+
+.button-container {
+    color: #0408f0;
+    font-size: 2.5rem;
+    display: flex;              /* Use Flexbox for layout */
+    justify-content: center;    /* Align buttons to the center */
+    gap: 3rem;                  /* Space between buttons */
+}
+
+  
+  .radio-tile-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .input-container {
+    position: relative;
+    height: 7rem;
+    width: 7rem;
+    margin: 0.5rem;
+  }
+  
+  .input-container input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+  }
+  
+  .input-container .radio-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    transition: all 300ms ease;
+  }
+  
+
+  .input-container label {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  input:checked+.radio-tile {
+    border-radius: 3rem;
+    height: 5rem;
+    background-color:rgb(8, 65, 199);
+    box-shadow: 0 0 12px var(--primary-color);
+    transform: scale(1.1);
+  }
+  
+  input:hover+.radio-tile {
+    box-shadow: 0 0 12px var(--primary-color);
+  }
+  
+  input:checked+.radio-tile ion-icon,
+  input:checked+.radio-tile label {
+    color: white;
+  }
+
+.Priority h2{
+    text-align: center;
+    text-shadow: 2px 1px 5px rgb(3, 1, 27);
+    
+}
+.Deadline h2{
+    text-align: center;
+    text-shadow: 2px 1px 5px rgb(3, 1, 27);
+}
+
+.Priority{
+    background-color: #578efb;
+    border-radius: 2rem;
+}
