@@ -37,7 +37,7 @@ const App = () => {
   return (
     <TasksProvider> 
       <Routes>
-          <Route path='/' element={<Navigate to='/' />} />
+          <Route path='/' element={<Navigate to='/home' />} />
         {!isLoggedIn ? (
           <>
             <Route
